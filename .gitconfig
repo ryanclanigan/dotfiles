@@ -1,0 +1,29 @@
+[user]
+	name = Ryan Lanigan
+  email = ryanclanigan@gmail.com
+[alias]
+        ls = "log --oneline --decorate"
+        ll = "log --oneline --decorate --numstat"
+        lg = "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+        lol = log --graph --decorate --pretty=oneline --abbrev-commit
+        lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+        publish = "!git push -u origin $(git rev-parse --abbrev-ref HEAD)"
+        cleanb = "!git branch --merged | egrep -v '(^\\*|develop|release)' | xargs git branch -d"
+        addtree = "worktree add --detach"
+        co = checkout
+        br = branch
+        ci = commit
+        st = status
+        ss = stash
+        p = pull --rebase --prune
+        b = "branch"
+        sync = "fetch --prune"
+        recent = "for-each-ref --sort='-authordate:iso8601' --format=' %(authordate:relative)%09%(refname:short)' refs/heads"
+        diffx = !diff | gitx 
+[color]
+        branch = auto
+        diff = auto
+        interactive = auto
+        status = auto
+[pull]
+        rebase = true
