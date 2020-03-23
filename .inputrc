@@ -1,0 +1,5 @@
+"\C-H": shell-backward-kill-word
+"\e[3;5~": shell-kill-word
+"\e[1;5C": forward-word
+"\e[1;5D": backward-word
+
