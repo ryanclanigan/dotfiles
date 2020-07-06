@@ -1,0 +1,62 @@
+# python aliases
+alias py='python3.7'
+alias pp='pip3'
+alias venv-create='python3.7 -m venv ./venv'
+alias act='source venv/bin/activate'
+
+# i3 export alias
+alias exp="export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0"
+
+# Sets default editor to vim
+export VISUAL=vim
+export EDITOR="$VISUAL"
+
+# Wordpress stuff
+alias wp-service-start='sudo service apache2 start && sudo service mysql start'
+alias wp-service-stop='sudo service apache2 stop && sudo service mysql stop'
+alias wp='wp --path=/var/www/html/'
+alias wp-path='cd /var/www/html/wp-content/'
+
+# vscode stuff
+alias config-gen='python3 ~/personal/python/vscode_cg/vscode_cg.py'
+
+# rust stuff
+alias ccheck='cargo build && cargo clippy'
+
+# docker stuff
+alias docker_clean_images='docker rmi $(docker images -a --filter=dangling=true -q)'
+alias docker_clean_ps='docker rm $(docker ps --filter=status=exited --filter=status=created -q)'
+
+# work stuff
+alias work='cd ~/work'
+alias crab='cd ~/work/crab'
+alias crab2='cd ~/work/crab2'
+alias crab3='cd ~/work/crab3'
+
+# nim
+export PATH=/home/ryan/.nimble/bin:$PATH
+
+# grunt server -> sq run --dev
+source ~/bin/grunt-alias
+
+# clears scrot pngs
+alias clear-png="rm ~/*.png"
+
+if [ -z "$SSH_AUTH_SOCK" ] ; then
+  eval "$(ssh-agent -s) > /dev/null"
+fi
+
+eval 'ssh-add ~/.ssh/id_rsa.work > /dev/null'
+eval "ssh-add ~/.ssh/id_rsa.personal > /dev/null"
+eval "clear"
+
+# Copy and Paste
+alias c='xclip -selection clipboard'
+alias v='xclip -o'
+
+# safety for rm
+alias rm='safe-rm'
+
+# deno stuff
+export DENO_INSTALL="/home/ryan/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
