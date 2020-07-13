@@ -1,8 +1,8 @@
 # python aliases
 alias py='python3.7'
 alias pp='pip3'
-alias venv-create='python3.7 -m venv ./venv'
 alias act='source venv/bin/activate'
+
 
 # i3 export alias
 alias exp="export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0"
