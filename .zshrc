@@ -32,7 +32,6 @@ deno
 zsh-users/zsh-syntax-highlighting
 EOBUNDLES
 
-# Load the theme.
 antigen theme romkatv/powerlevel10k
 
 # Tell Antigen that you're done.
@@ -55,6 +54,16 @@ spy() {
 
 ,() {
   bash -c "source environment && $*"
+}
+
+olv() {
+  latest_file="$(ls -t | head -n 1)"
+  echo $latest_file
+  vim -- $latest_file
+}
+
+clippy() {
+  xclip -sel c < $*
 }
 
 bindkey '^H' backward-kill-word

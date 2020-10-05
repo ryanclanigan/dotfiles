@@ -7,6 +7,7 @@ set number
 set shiftwidth=2
 set smarttab
 set expandtab
+set clipboard=unnamed
 set clipboard=unnamedplus
 filetype on
 filetype plugin indent on
@@ -20,3 +21,4 @@ endfun
 autocmd FileType c,cpp,java,php,ruby,python autocmd
         \ BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
 autocmd BufWritePre Makefile :call <SID>StripTrailingWhitespaces()
+noremap! <C-?> <C-h>

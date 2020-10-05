@@ -285,6 +285,9 @@ exec --no-startup-id xbindkeys
 # Allows zoom annotations
 exec --no-startup-id xcompmgr -c -l0 -t0 -r0 -o.00
 
+# Clipboard history
+exec --no-startup-id copyq
+
 # Moves container to other screen
 bindsym $mod+Shift+greater move container to output right
 bindsym $mod+Shift+less move container to output left
