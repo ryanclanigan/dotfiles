@@ -41,7 +41,12 @@ setopt no_share_history
 unsetopt share_history
 
 source ~/.sh_aliases
+source ~/.work
+# Rust Cargo
 export PATH="$HOME/.cargo/bin:$PATH"
+
+# Yarn globals
+export PATH="$PATH:$(yarn global bin)"
 
 sq() {
   command="sq $@"
@@ -50,6 +55,10 @@ sq() {
 
 spy() {
   bash -c "source environment && python -m $*" 
+}
+
+spilot() {
+  bash -c "source environment && python -m pilot $*"
 }
 
 ,() {
