@@ -9,6 +9,7 @@ set smarttab
 set expandtab
 set clipboard=unnamed
 set clipboard=unnamedplus
+set linebreak
 filetype on
 filetype plugin indent on
 colorscheme darkblue
