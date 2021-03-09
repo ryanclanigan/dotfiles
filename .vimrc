@@ -10,6 +10,7 @@ set expandtab
 set clipboard=unnamed
 set clipboard=unnamedplus
 set linebreak
+set hlsearch
 filetype on
 filetype plugin indent on
 colorscheme darkblue

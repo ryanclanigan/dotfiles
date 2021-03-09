@@ -28,10 +28,10 @@ alias docker_clean_images='docker rmi $(docker images -a --filter=dangling=true 
 alias docker_clean_ps='docker rm $(docker ps --filter=status=exited --filter=status=created -q)'
 
 # work stuff
-alias work='cd ~/work'
-alias crab='cd ~/work/crab'
-alias crab2='cd ~/work/crab2'
-alias crab3='cd ~/work/crab3'
+alias -g work='~/work'
+alias -g crab='~/work/crab'
+alias -g crab2='~/work/crab2'
+alias -g crab3='~/work/crab3'
 
 # nim
 export PATH=/home/ryan/.nimble/bin:$PATH
@@ -60,3 +60,7 @@ alias rm='safe-rm'
 # deno stuff
 export DENO_INSTALL="/home/ryan/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
+
+# sound stuff
+alias sounds='pavucontrol'
+alias mixer='alsamixer'
