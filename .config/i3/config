@@ -85,6 +85,10 @@ bindsym $mod+Shift+space floating toggle
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
 
+# focus parent/child
+bindsym $mod+c focus child
+bindsym $mod+p focus parent
+
 # use workspaces on different monitors
 workspace 1 output eDP-1
 workspace 2 output eDP-1
