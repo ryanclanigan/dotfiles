@@ -3,7 +3,8 @@ set autoindent
 set smartindent
 syntax on
 set tabstop=2
-set number
+set number relativenumber
+set nu rnu
 set shiftwidth=2
 set smarttab
 set expandtab
