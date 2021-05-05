@@ -76,7 +76,7 @@ clippy() {
 }
 
 back() {
-  $* &> /dev/null & disown
+  nohup $* >/dev/null 2>&1 &
 }
 
 insert-last-words() {
