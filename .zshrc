@@ -46,7 +46,7 @@ source ~/.work
 export PATH="$HOME/.cargo/bin:$PATH"
 
 # Yarn globals
-export PATH="$PATH:$(yarn global bin)"
+# export PATH="$PATH:$(yarn global bin)"
 
 sq() {
   command="sq $@"
@@ -139,6 +139,8 @@ bindkey '^H' backward-kill-word
 bindkey '^[[3;5~' kill-word
 # Right alt is used for compose (unicode/alt characters)
 setxkbmap -option "compose:ralt"
+
+export GDK_SCALE=2
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

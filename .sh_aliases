@@ -28,10 +28,14 @@ alias docker_clean_images='docker rmi $(docker images -a --filter=dangling=true 
 alias docker_clean_ps='docker rm $(docker ps --filter=status=exited --filter=status=created -q)'
 
 # work stuff
-alias -g work='~/work'
-alias -g crab='~/work/crab'
-alias -g crab2='~/work/crab2'
-alias -g crab3='~/work/crab3'
+# alias -g work='~/work'
+# alias -g crab='~/work/crab'
+# alias -g crab2='~/work/crab2'
+# alias -g crab3='~/work/crab3'
+alias work='cd ~/work'
+alias crab='cd ~/work/crab'
+alias crab2='cd ~/work/crab2'
+alias crab3='cd ~/work/crab3'
 
 # nim
 export PATH=/home/ryan/.nimble/bin:$PATH
@@ -46,8 +50,8 @@ if [ -z "$SSH_AUTH_SOCK" ] ; then
   eval "$(ssh-agent -s) > /dev/null"
 fi
 
-eval 'ssh-add ~/.ssh/id_rsa.work > /dev/null'
-eval "ssh-add ~/.ssh/id_rsa.personal > /dev/null"
+eval 'ssh-add ~/.ssh/work > /dev/null'
+eval "ssh-add ~/.ssh/personal > /dev/null"
 eval "clear"
 
 # Copy and Paste
@@ -64,3 +68,9 @@ export PATH="$DENO_INSTALL/bin:$PATH"
 # sound stuff
 alias sounds='pavucontrol'
 alias mixer='alsamixer'
+
+# vs code real size
+alias bcode='code --force-device-scale-factor=2'
+
+export PATH="$HOME/bin:$PATH"
+
