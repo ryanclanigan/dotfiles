@@ -140,6 +140,7 @@ bindkey '^[[3;5~' kill-word
 # Right alt is used for compose (unicode/alt characters)
 setxkbmap -option "compose:ralt"
 
+# for 4k
 export GDK_SCALE=2
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
