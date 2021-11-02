@@ -37,6 +37,8 @@ antigen theme romkatv/powerlevel10k
 # Tell Antigen that you're done.
 antigen apply
 
+fpath=(~/.autocompletes $fpath)
+
 setopt no_share_history
 unsetopt share_history
 
