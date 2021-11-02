@@ -112,16 +112,16 @@ workspace 8 output eDP-1
 workspace 9 output eDP-1
 workspace 10 output eDP-1
 
-workspace 11 output DP-1
-workspace 12 output DP-1
-workspace 13 output DP-1
-workspace 14 output DP-1
-workspace 15 output DP-1
-workspace 16 output DP-1
-workspace 17 output DP-1
-workspace 18 output DP-1
-workspace 19 output DP-1
-workspace 20 output DP-1
+workspace 11 output DP-3
+workspace 12 output DP-3
+workspace 13 output DP-3
+workspace 14 output DP-3
+workspace 15 output DP-3
+workspace 16 output DP-3
+workspace 17 output DP-3
+workspace 18 output DP-3
+workspace 19 output DP-3
+workspace 20 output DP-3
 
 # switch to workspace 1-10
 bindsym $mod+1 workspace 1
@@ -302,7 +302,7 @@ bar {
 # exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # Tells xrandr to always put second monitor to right of first
-exec --no-startup-id xrandr --output eDP-1 --left-of DP-1 --auto
+# exec --no-startup-id xrandr --output eDP-1 --left-of DP-1 --auto
 
 # Trackpad Magic. I don't really understand it
 exec --no-startup-id xmodmap -e "pointer = 1 2 3 5 4 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20"
