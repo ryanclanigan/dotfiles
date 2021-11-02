@@ -25,3 +25,4 @@ autocmd FileType c,cpp,java,php,ruby,python autocmd
         \ BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
 autocmd BufWritePre Makefile :call <SID>StripTrailingWhitespaces()
 noremap! <C-?> <C-h>
+set ww+=<,>,[,]
