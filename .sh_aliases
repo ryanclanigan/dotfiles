@@ -66,7 +66,6 @@ export DENO_INSTALL="/home/ryan/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 
 # sound stuff
-alias sounds='pavucontrol'
 alias mixer='alsamixer'
 
 # vs code real size

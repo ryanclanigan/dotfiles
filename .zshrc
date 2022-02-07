@@ -51,7 +51,8 @@ export PATH="$HOME/.cargo/bin:$PATH"
 # export PATH="$PATH:$(yarn global bin)"
 
 sq() {
-  command="sq $@"
+  urned_command=$(echo "$@" | sed -e "s/urn/run/g")
+  command="sq $urned_command"
   bash -c "source environment && $command"
 }
 

@@ -1,3 +1,4 @@
+execute pathogen#infect()
 set mouse=a
 set autoindent
 set smartindent
