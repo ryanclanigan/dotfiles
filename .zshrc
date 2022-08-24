@@ -175,6 +175,34 @@ portkill() {
   fi
 }
 
+# Image optimization tools
+png() {
+    pngcrush -brute "$1"{,.} && du -b "$1"{,.}
+}
+gif() {
+    gifsicle -O "$1" -o "$1." && du -b "$1"{,.}
+}
+jpeg() {
+    jpegtran "$1" > "$1." && du -b "$1"{,.}
+}
+# Just for easy access in history
+mpng() {
+    mv "$1"{.,}
+}
+mgif() {
+    newsize=$(wc -c <"$1.")
+    oldsize=$(wc -c <"$1")
+    if [ $oldsize -gt $newsize ] ; then
+        mv "$1"{.,}
+    else
+        rm "$1."
+    fi
+}
+mjpeg() {
+    mv "$1"{.,}
+}
+
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
@@ -206,4 +234,3 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 
 # beads
 export BEADS_DIR="$HOME/work/.beads"
-
