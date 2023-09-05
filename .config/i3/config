@@ -339,6 +339,9 @@ bindsym Print exec scrot -s 'mv $f /tmp/'
 exec xrandr --dpi 220
 exec xinput set-prop 21 336 1
 
+# Watches my todo file
+exec gitwatch -r origin /home/ryan/personal/todo
+
 # change volume or toggle mute
 bindsym XF86AudioRaiseVolume exec amixer -q -D pulse sset Master 5%+ && pkill -RTMIN+10 i3blocks 
 bindsym XF86AudioLowerVolume exec amixer -q -D pulse sset Master 5%- && pkill -RTMIN+10 i3blocks

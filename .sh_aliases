@@ -46,6 +46,11 @@ source ~/bin/grunt-alias
 # clears scrot pngs
 alias clear-png="rm ~/*.png"
 
+# copy paste shorthand 
+alias c='xclip -selection clipboard'
+alias v='xclip -o'
+
+
 if [ -z "$SSH_AUTH_SOCK" ] ; then
   eval "$(ssh-agent -s) > /dev/null"
 fi
