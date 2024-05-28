@@ -70,6 +70,10 @@ spilot() {
   bash -c "source environment && $*"
 }
 
+,g() {
+  , gradlew $*
+}
+
 source ~/.sh_aliases_work
 
 olv() {
@@ -164,13 +168,19 @@ deploy() {
 }
 
 
+portkill() {
+  if [[ ${(%):-%#} = \# ]]; then
+    sudo kill -9 $(sudo lsof -t -i:${1:?"The port to kill must be specified"})
+  else 
+    echo "Please run as root"
+  fi
+}
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
-
-source /home/ryan/.config/broot/launcher/bash/br
 
 fpath=(/home/ryan/.zsh/gradle-completion $fpath)

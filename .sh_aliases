@@ -76,5 +76,8 @@ alias mixer='alsamixer'
 # vs code real size
 alias bcode='code --force-device-scale-factor=2'
 
+# shorthand for opening difftastic
+alias gdf='git difftool --tool=difftastic'
+
 export PATH="$HOME/bin:$PATH"
 
