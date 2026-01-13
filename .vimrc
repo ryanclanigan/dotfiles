@@ -1,4 +1,3 @@
-execute pathogen#infect()
 set mouse=a
 set autoindent
 set smartindent
@@ -9,7 +8,6 @@ set nu rnu
 set shiftwidth=2
 set smarttab
 set expandtab
-set clipboard=unnamed
 set clipboard=unnamedplus
 set linebreak
 set hlsearch
