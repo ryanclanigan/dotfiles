@@ -378,5 +378,8 @@ exec_always {
 # Notification Daemon
 exec swaync
 
+# Drata, compliance agent
+exec drata-agent
+
 # Toggle control center
 bindsym $mod+Shift+n exec swaync-client -t -sw
