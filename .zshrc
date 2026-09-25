@@ -196,3 +196,11 @@ export PATH="$PATH:/opt/nvim/"
 export PATH="/home/ryan/.local/bin:$PATH"
 eval "$(but completions zsh)"
 export EDITOR=nvim
+
+# bun completions
+[ -s "/home/ryan/.bun/_bun" ] && source "/home/ryan/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
