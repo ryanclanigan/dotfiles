@@ -25,7 +25,6 @@ python
 node
 rust
 ssh-agent
-tmux
 sudo
 vscode
 stack
