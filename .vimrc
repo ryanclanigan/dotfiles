@@ -13,7 +13,6 @@ set linebreak
 set hlsearch
 filetype on
 filetype plugin indent on
-colorscheme darkblue
 fun! <SID>StripTrailingWhitespaces()
     let l = line(".")
     let c = col(".")
