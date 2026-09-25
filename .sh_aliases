@@ -80,4 +80,4 @@ alias bcode='code --force-device-scale-factor=2'
 alias gdf='git difftool --tool=difftastic'
 
 export PATH="$HOME/bin:$PATH"
-
+alias vim=nvim
