@@ -149,8 +149,6 @@ fpath=(~/completions $fpath)
 
 bindkey '^H' backward-kill-word
 bindkey '^[[3;5~' kill-word
-# Right alt is used for compose (unicode/alt characters)
-setxkbmap -option "compose:ralt"
 
 
 # for 4k
