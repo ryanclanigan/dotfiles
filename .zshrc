@@ -204,3 +204,6 @@ export EDITOR=nvim
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
+# beads
+export BEADS_DIR="$HOME/work/.beads"
+
