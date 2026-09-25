@@ -342,6 +342,7 @@ bindsym Print exec scrot -s 'mv $f /tmp/'
 # exec xrandr --dpi 220
 # exec xinput set-prop 21 336 1
 
+output eDP-1 scale 1.5
 output eDP-2 scale 1.5
 
 # Watches my todo file
