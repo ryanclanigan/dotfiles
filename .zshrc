@@ -51,7 +51,6 @@ unsetopt share_history
 
 source ~/.sh_aliases
 source ~/.work
-source ~/.fzf.zsh
 # Rust Cargo
 export PATH="$HOME/.cargo/bin:$PATH"
 
@@ -80,7 +79,7 @@ spilot() {
   , gradlew $*
 }
 
-source ~/.sh_aliases_work
+[[ ! -r ~/.sh_aliases_work ]] || source ~/.sh_aliases_work
 
 olv() {
   latest_file="$(ls -t | head -n 1)"
@@ -211,7 +210,11 @@ mjpeg() {
 
 
 # Set up fzf key bindings and fuzzy completion
-source <(fzf --zsh)
+if [[ -r ~/.fzf.zsh ]]; then
+  source ~/.fzf.zsh
+elif (( $+commands[fzf] )); then
+  source <(fzf --zsh)
+fi
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -233,7 +236,9 @@ export PATH="$PATH:/opt/nvim/"
 
 # Added by GitButler installer
 export PATH="/home/ryan/.local/bin:$PATH"
-eval "$(but completions zsh)"
+if (( $+commands[but] )); then
+  eval "$(but completions zsh)"
+fi
 export EDITOR=nvim
 
 # bun completions
