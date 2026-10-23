@@ -88,6 +88,8 @@ olv() {
   vim -- $latest_file
 }
 
+alias vim="nvim"
+
 clippy() {
   xclip -sel c < $*
 }
