@@ -10,6 +10,9 @@ ulimit -Sn 65536
 export ZSH_CACHE_DIR="${XDG_CACHE_HOME:-$HOME/.cache}/oh-my-zsh"
 mkdir -p "$ZSH_CACHE_DIR/completions"
 
+# The ssh-agent plugin adds these keys only when they are not already loaded.
+zstyle :omz:plugins:ssh-agent identities work personal
+
 source ~/.config/antigen.zsh
 
 # Load the oh-my-zsh's library.
