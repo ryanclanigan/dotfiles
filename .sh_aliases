@@ -41,7 +41,7 @@ alias crab3='cd ~/work/crab3'
 export PATH=/home/ryan/.nimble/bin:$PATH
 
 # grunt server -> sq run --dev
-source ~/bin/grunt-alias
+[ ! -r "$HOME/bin/grunt-alias" ] || source "$HOME/bin/grunt-alias"
 
 # clears scrot pngs
 alias clear-png="rm ~/*.png"
