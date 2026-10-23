@@ -237,7 +237,7 @@ eval "$(but completions zsh)"
 export EDITOR=nvim
 
 # bun completions
-[ -s "/home/ryan/.bun/_bun" ] && source "/home/ryan/.bun/_bun"
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
