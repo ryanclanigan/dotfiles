@@ -219,6 +219,13 @@ fi
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+# Cloud context lookups block the first prompt. Opt in on machines that need them
+# by exporting ZSH_CLOUD_PROMPT=1 before starting zsh.
+if [[ ${ZSH_CLOUD_PROMPT:-0} != 1 ]]; then
+  typeset -g POWERLEVEL9K_AZURE_DISABLED=true
+  typeset -g POWERLEVEL9K_KUBECONTEXT_DISABLED=true
+fi
+
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
